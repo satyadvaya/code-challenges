@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati } from './challenge02.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge } from './challenge02.js';
 
 test('five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -31,5 +31,20 @@ test('given an array of people objects, returns a new array that has filtered ou
     { name: 'Angelina Jolie', member: true }, 
     { name: 'Paris Hilton', member: true }, 
     { name: 'Bob Ziroll', member: true } 
+    ]); // assert
+});
+
+test('makes a filtered list of all the people who are old enough to see The Matrix (older than 18)', () => {
+  const input = [
+    { name: 'Angelina Jolie', age: 80 },
+    { name: 'Eric Jones', age: 2 },
+    { name: 'Paris Hilton', age: 5 },
+    { name: 'Kayne West', age: 16 },
+    { name: 'Bob Ziroll', age: 100 }
+    ]; // arrange
+  const output = ofAge(input); // act
+  expect(output).toEqual([ 
+    { name: 'Angelina Jolie', age: 80 },
+    { name: 'Bob Ziroll', age: 100 } 
     ]); // assert
 });
