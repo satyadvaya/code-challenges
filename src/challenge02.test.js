@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge } from './challenge02.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest } from './challenge02.js';
 
 test('five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -47,4 +47,10 @@ test('makes a filtered list of all the people who are old enough to see The Matr
     { name: 'Angelina Jolie', age: 80 },
     { name: 'Bob Ziroll', age: 100 } 
     ]); // assert
+});
+
+test('sorts an array from smallest number to largest', () => {
+  const input = [1, 3, 5, 2, 90, 20]; // arrange
+  const output = leastToGreatest(input); // act
+  expect(output).toEqual([1, 2, 3, 5, 20, 90]); // assert
 });

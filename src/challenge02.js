@@ -18,3 +18,7 @@ export function peopleWhoBelongToTheIlluminati(arr) {
 export function ofAge(arr) {
   return arr.filter((person) => person.age > 18);
 }
+
+export function leastToGreatest(arr) {
+  return arr.sort((a, b) => a - b);
+}
