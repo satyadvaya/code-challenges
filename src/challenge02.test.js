@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly } from './challenge02.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati } from './challenge02.js';
 
 test('five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -16,4 +16,20 @@ test('given an array of strings, returns a new array that only includes those th
   const input = ['dog', 'wolf', 'by', 'family', 'eaten', 'camping']; // arrange
   const output = fiveCharactersOrFewerOnly(input); // act
   expect(output).toEqual(['by', 'dog', 'wolf', 'eaten']); // assert
+});
+
+test('given an array of people objects, returns a new array that has filtered out all those who do not belong to the club', () => {
+  const input = [
+    { name: 'Angelina Jolie', member: true },
+    { name: 'Eric Jones', member: false },
+    { name: 'Paris Hilton', member: true },
+    { name: 'Kayne West', member: false },
+    { name: 'Bob Ziroll', member: true }
+    ]; // arrange
+  const output = peopleWhoBelongToTheIlluminati(input); // act
+  expect(output).toEqual([ 
+    { name: 'Angelina Jolie', member: true }, 
+    { name: 'Paris Hilton', member: true }, 
+    { name: 'Bob Ziroll', member: true } 
+    ]); // assert
 });

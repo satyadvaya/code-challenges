@@ -10,3 +10,7 @@ export function fiveCharactersOrFewerOnly(arr) {
     const newArr = arr.filter((a) => a.length <= 5);
     return newArr.sort((a, b) => a.length - b.length);
 }
+
+export function peopleWhoBelongToTheIlluminati(arr) {
+  return arr.filter((person) => person.member === true);
+}
