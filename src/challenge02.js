@@ -34,3 +34,7 @@ export function lengthSort(arr) {
 export function alphabetical(arr) {
   return arr.sort((a, b) => a.localeCompare(b));
 }
+
+export function byAge(arr) {
+  return arr.sort((a, b) => a.age - b.age);
+}

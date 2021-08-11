@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest, greatestToLeast, lengthSort, alphabetical } from './challenge02.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest, greatestToLeast, lengthSort, alphabetical, byAge } from './challenge02.js';
 
 test('five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -71,4 +71,20 @@ test('sorts an array alphabetically', () => {
   const input = ['dog', 'wolf', 'by', 'family', 'eaten']; // arrange
   const output = alphabetical(input); // act
   expect(output).toEqual(['by', 'dog', 'eaten', 'family', 'wolf']); // assert
+});
+
+test('sorts the objects in the array by age', () => {
+  const input = [
+    { name: 'Quiet Samurai', age: 22 },
+    { name: 'Arrogant Ambassador', age: 100 },
+    { name: 'Misunderstood Observer', age: 2 },
+    { name: 'Unlucky Swami', age: 77 }
+    ]; // arrange
+  const output = byAge(input); // act
+  expect(output).toEqual([ 
+    { name: 'Misunderstood Observer', age: 2 },
+    { name: 'Quiet Samurai', age: 22 },
+    { name: 'Unlucky Swami', age: 77 },
+    { name: 'Arrogant Ambassador', age: 100 } 
+    ]); // assert
 });
