@@ -30,3 +30,7 @@ export function greatestToLeast(arr) {
 export function lengthSort(arr) {
   return arr.sort((a, b) => a.length - b.length);
 }
+
+export function alphabetical(arr) {
+  return arr.sort((a, b) => a.localeCompare(b));
+}
