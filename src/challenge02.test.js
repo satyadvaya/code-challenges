@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest } from './challenge02.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest, greatestToLeast } from './challenge02.js';
 
 test('five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -53,4 +53,10 @@ test('sorts an array from smallest number to largest', () => {
   const input = [1, 3, 5, 2, 90, 20]; // arrange
   const output = leastToGreatest(input); // act
   expect(output).toEqual([1, 2, 3, 5, 20, 90]); // assert
+});
+
+test('sorts an array from largest number to smallest', () => {
+  const input = [1, 3, 5, 2, 90, 20]; // arrange
+  const output = greatestToLeast(input); // act
+  expect(output).toEqual([90, 20, 5, 3, 2, 1]); // assert
 });
