@@ -1,14 +1,14 @@
 export function fiveAndGreaterOnly(arr) {
-    return arr.filter((number) => number >= 5);
+  return arr.filter((number) => number >= 5);
 }
 
 export function evensOnly(arr) {
-    return arr.filter((number) => number % 2 === 0);
+  return arr.filter((number) => number % 2 === 0);
 }
 
 export function fiveCharactersOrFewerOnly(arr) {
-    const newArr = arr.filter((a) => a.length <= 5);
-    return newArr.sort((a, b) => a.length - b.length);
+  const newArr = arr.filter((a) => a.length <= 5);
+  return newArr.sort((a, b) => a.length - b.length);
 }
 
 export function peopleWhoBelongToTheIlluminati(arr) {
@@ -24,5 +24,9 @@ export function leastToGreatest(arr) {
 }
 
 export function greatestToLeast(arr) {
-return arr.sort((a, b) => b - a);
+  return arr.sort((a, b) => b - a);
+}
+
+export function lengthSort(arr) {
+  return arr.sort((a, b) => a.length - b.length);
 }
