@@ -1,5 +1,7 @@
 import { doubleNumbers, stringItUp, capitalizeNames, namesOnly, makeStrings, readyToPutInTheDOM } from './challenge01.js';
 
+// .map()
+
 test('maps to array of doubled numbers', () => {
   const input = [2, 5, 100]; // arrange
   const output = doubleNumbers(input); // act
