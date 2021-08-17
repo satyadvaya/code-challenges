@@ -1,4 +1,4 @@
-import { capitalizeObjectKeys } from './challenge03.js';
+import { capitalizeObjectKeys, sortedKeys } from './challenge03.js';
 
 // Object.keys()
 
@@ -6,4 +6,10 @@ test('given an object, it returns an array that has the keys transformed into up
   const dataObject = { name: 'Angelina Jolie', age: 80 }; //arrange
   const output = capitalizeObjectKeys(dataObject); //act
   expect(output).toEqual(['NAME', 'AGE']); //assert
+});
+
+test('given an object, it returns an array that has the keys sorted smallest to largest by length', () => {
+  const dataObject = { name: 'Spot', age: 3, isDog: true, friends: ['Rover', 'Steve', 'Fluffy'] }; //arrange
+  const output = sortedKeys(dataObject); //act
+  expect(output).toEqual(['age', 'name', 'isDog', 'friends']); //assert
 });
