@@ -6,19 +6,19 @@ test('five and greater only', () => {
   expect(output).toEqual([6, 8]); // assert
 });
 
-test('given an array of numbers, returns a new array that only includes the even numbers', () => {
+test('given an array of numbers, it returns a new array that only includes the even numbers', () => {
   const input = [3, 6, 8, 2]; // arrange
   const output = evensOnly(input); // act
   expect(output).toEqual([6, 8, 2]); // assert
 });
 
-test('given an array of strings, returns a new array that only includes those that are 5 characters or fewer in length', () => {
+test('given an array of strings, it returns a new array that only includes those that are 5 characters or fewer in length', () => {
   const input = ['dog', 'wolf', 'by', 'family', 'eaten', 'camping']; // arrange
   const output = fiveCharactersOrFewerOnly(input); // act
   expect(output).toEqual(['by', 'dog', 'wolf', 'eaten']); // assert
 });
 
-test('given an array of people objects, returns a new array that has filtered out all those who do not belong to the club', () => {
+test('given an array of people objects, it returns a new array that has filtered out all those who do not belong to the club', () => {
   const input = [
     { name: 'Angelina Jolie', member: true },
     { name: 'Eric Jones', member: false },
