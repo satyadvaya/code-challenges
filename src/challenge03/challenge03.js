@@ -14,7 +14,7 @@ export function getFilteredKey(obj) {
 
 // Object.entries()
 
-export function getArrayOfKeysAndValues(obj){
+export function getArrayOfKeysAndValues(obj) {
     return Object.entries(obj);
 }
 
